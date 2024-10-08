@@ -25,6 +25,10 @@ function Login() {
 
         const response = await dispatch(userLogin(loginData));
         const user = await dispatch(getCurrentUser());
+        // console.log("user : ", user);
+        // console.log("response : ", response.payload);
+        
+        
         if (user && response?.payload) {
             navigate("/");
         }
